@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name = "description" content = "A-Frame Test Project">
+        <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+    </head>
+    <body>
+        <a-scene>
+
+            <a-assets>
+
+                <img id = "berg" src = "berg.jpeg" >
+                <img id = "bill" src = "bill.jpg"  >
+                <img id = "nova" src = "nova.jpeg" >
+                <img id = "shake" src = "shake.jpg">
+
+                <audio id = "drums" src = "night-drums.wav"  ></audio>
+                <audio id = "chords" src = "night-chords.wav"></audio>
+                <audio id = "pads" src = "night-ambience.wav"></audio>
+                <audio id = "bass" src = "night-bass.wav    "></audio>
+
+            </a-assets>
+
+            <a-box position = "-5 0  0" scale = "1 2 1" src = "#berg"  sound = "src: #drums; autoplay: true; loop: true" ></a-box>
+            <a-box position = " 0 0  5" scale = "1 2 1" src = "#bill"  sound = "src: #chords; autoplay: true; loop: true"></a-box>
+            <a-box position = " 5 0  0" scale = "1 2 1" src = "#nova"  sound = "src: #pads; autoplay: true; loop: true " ></a-box>
+            <a-box position = " 0 0 -5" scale = "1 2 1" src = "#shake" sound = "src: #bass; autoplay: true; loop: true"  ></a-box>
+
+        </a-scene>
+    </body>
+</html>
