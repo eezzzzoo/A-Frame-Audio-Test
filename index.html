@@ -2,9 +2,17 @@
 <html>
     <head>
         <meta name = "description" content = "A-Frame Test Project">
-        <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+        <script src = "https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+        <link rel = "stylesheet" href = "style.css">
     </head>
     <body>
+
+        <main>
+            <p>Click the Nova to start the music.</p>
+            <p>Also try clicking Dean Berg, the Spoonbill, or the Oreo Milkshake!</p>
+            <p>idk how to stop them</p>
+        </main>
+
         <a-scene>
 
             <a-assets>
@@ -21,10 +29,14 @@
 
             </a-assets>
 
-            <a-box position = "-5 0  0" scale = "1 2 1" src = "#berg"  sound = "src: #drums; autoplay: true; loop: true" ></a-box>
-            <a-box position = " 0 0  5" scale = "1 2 1" src = "#bill"  sound = "src: #chords; autoplay: true; loop: true"></a-box>
-            <a-box position = " 5 0  0" scale = "1 2 1" src = "#nova"  sound = "src: #pads; autoplay: true; loop: true " ></a-box>
-            <a-box position = " 0 0 -5" scale = "1 2 1" src = "#shake" sound = "src: #bass; autoplay: true; loop: true"  ></a-box>
+            <a-camera>
+                <a-cursor></a-cursor>
+            </a-camera>
+
+            <a-box position = "-5 0  0" scale = "1 2 1" src = "#berg"  sound = "src: #drums; on: click; autoplay: false; loop: true" ></a-box>
+            <a-box position = " 0 0  5" scale = "1 2 1" src = "#bill"  sound = "src: #chords; on: click; autoplay: false; loop: true"></a-box>
+            <a-box position = " 0 0 -5" scale = "1 2 1" src = "#nova"  sound = "src: #pads; on: click; autoplay: false; loop: true " ></a-box>
+            <a-box position = " 5 0  0" scale = "1 2 1" src = "#shake" sound = "src: #bass; on: click; autoplay: false; loop: true"  ></a-box>
 
         </a-scene>
     </body>
